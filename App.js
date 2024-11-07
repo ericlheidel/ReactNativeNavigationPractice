@@ -1,6 +1,7 @@
+import React, { useEffect, useState } from "react"
 import { createDrawerNavigator } from "@react-navigation/drawer"
 import "./gesture-handler"
-import { StyleSheet } from "react-native"
+import { StyleSheet, Text, View } from "react-native"
 import { NavigationContainer } from "@react-navigation/native"
 import AppOneTabs from "./tabs/AppOneTabs"
 import AppTwoTabs from "./tabs/AppTwoTabs"
@@ -8,20 +9,44 @@ import AppTwoTabs from "./tabs/AppTwoTabs"
 const Drawer = createDrawerNavigator()
 
 export default function App() {
-  return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="LED">
-        <Drawer.Screen name="LED" component={AppOneTabs} />
-        <Drawer.Screen name="Projector" component={AppTwoTabs} />
-      </Drawer.Navigator>
-    </NavigationContainer>
-  )
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2000)
+  }, [])
+
+  if (isLoading) {
+    return (
+      <View style={styles.container}>
+        <Text>MooTV</Text>
+      </View>
+    )
+  } else {
+    return (
+      <NavigationContainer>
+        <Drawer.Navigator initialRouteName="LED">
+          <Drawer.Screen
+            name="LED"
+            component={AppOneTabs}
+            options={{ headerTitle: "MooTV" }}
+          />
+          <Drawer.Screen
+            name="Projector"
+            component={AppTwoTabs}
+            options={{ headerTitle: "MooTV" }}
+          />
+        </Drawer.Navigator>
+      </NavigationContainer>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f5f5f5",
     alignItems: "center",
     justifyContent: "center",
   },
