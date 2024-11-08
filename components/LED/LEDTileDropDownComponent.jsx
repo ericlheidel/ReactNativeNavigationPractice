@@ -18,7 +18,7 @@ export default function LEDTileDropDownComponent({ setSelectKey }) {
     let options = ["All Brands"]
 
     LEDTileExamples.map((tile) => {
-      options.push(tile.tileBrand)
+      options.push(tile.tileBrandId)
     })
 
     setOptions(options)

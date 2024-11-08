@@ -10,7 +10,7 @@ export default function LEDTilesScreen() {
 
   useEffect(() => {
     const matchingTiles = LEDTileExamples.filter(
-      (tile) => tile.tileBrand === selectKey
+      (tile) => tile.tileBrandId === selectKey
     )
 
     setFilteredTiles(matchingTiles)

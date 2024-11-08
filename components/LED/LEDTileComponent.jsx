@@ -66,7 +66,7 @@ export default function LEDTileComponent({ tile }) {
         {/* <PressableImage /> */}
         <View style={styles.tileDetails}>
           <Text style={styles.tileTitle}>
-            {tile.tileBrand} {tile.pixelPitch}mm
+            {tile.tileBrandId} {tile.pixelPitch}mm
           </Text>
           {tile.tileModel ? (
             <Text style={styles.tileDetail}>
@@ -76,7 +76,7 @@ export default function LEDTileComponent({ tile }) {
             ""
           )}
           <Text style={styles.tileDetail}>
-            Card Type: <Text style={styles.boldText}>{tile.tileCard}</Text>
+            Card Type: <Text style={styles.boldText}>{tile.tileCardId}</Text>
           </Text>
           <Text style={styles.tileDetail}>
             Pitch: <Text style={styles.boldText}>{tile.pixelPitch}mm</Text>
@@ -97,7 +97,8 @@ export default function LEDTileComponent({ tile }) {
             Tile Weight: <Text style={styles.boldText}>{tile.weightLBS}</Text>
           </Text>
           <Text style={styles.tileDetail}>
-            Processor: <Text style={styles.boldText}>{tile.processorType}</Text>
+            Processor:{" "}
+            <Text style={styles.boldText}>{tile.processorTypeId}</Text>
           </Text>
         </View>
       </View>

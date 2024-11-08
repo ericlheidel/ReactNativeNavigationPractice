@@ -31,12 +31,12 @@ export default function App() {
           <Drawer.Screen
             name="LED"
             component={AppOneTabs}
-            options={{ headerTitle: "MooTV" }}
+            options={{ headerTitle: "Moo TV" }}
           />
           <Drawer.Screen
             name="Projector"
             component={AppTwoTabs}
-            options={{ headerTitle: "MooTV" }}
+            options={{ headerTitle: "Moo TV" }}
           />
         </Drawer.Navigator>
       </NavigationContainer>

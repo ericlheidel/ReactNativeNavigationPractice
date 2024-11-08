@@ -81,21 +81,29 @@ export default function LEDProcessorComponent({ processor }) {
             <Text style={styles.boldText}>{processor.maxResolution}</Text>
           </Text>
           <Text style={styles.processorDetail}>
-            {processor.fiberExtender && "Includes Fiber Extender"}
+            {processor.fiberExtender && (
+              <Text>
+                Includes: <Text style={styles.boldText}>Fiber Extender</Text>
+              </Text>
+            )}
           </Text>
           <Text style={styles.processorDetail}>
             Controllers:{" "}
-            <Text style={styles.boldText}>{processor.controlTypeId}</Text>
+            <Text style={styles.boldText}>
+              {processor.processorControlTypeId}
+            </Text>
           </Text>
           <Text style={styles.processorDetail}>
             Redundancy:{" "}
             <Text style={styles.boldText}>
-              {processor.processorRedundancyId}
+              {processor.processorRedundancyTypeId}
             </Text>
           </Text>
           <Text style={styles.processorDetail}>
             Processor Software:{" "}
-            <Text style={styles.boldText}>{processor.processorSoftwareId}</Text>
+            <Text style={styles.boldText}>
+              {processor.processorSoftwareTypeId}
+            </Text>
           </Text>
         </View>
       </View>
