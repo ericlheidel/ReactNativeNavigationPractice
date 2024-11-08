@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: "#f5f5f5", // Light background for the ScrollView
+    backgroundColor: "#f5f5f5",
   },
   tile: {
     backgroundColor: "#ffffff",
@@ -54,7 +54,10 @@ const styles = StyleSheet.create({
     padding: 16,
     marginBottom: 16,
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
     shadowOpacity: 0.5,
     shadowRadius: 5,
     elevation: 3,
@@ -79,5 +82,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: "#666",
     marginBottom: 8,
+  },
+  boldText: {
+    color: "black",
+    fontWeight: "600",
   },
 })
