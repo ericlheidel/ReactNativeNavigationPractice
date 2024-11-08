@@ -34,6 +34,8 @@ export default function LEDTileComponent({ tile }) {
           <Text style={styles.tileDetail}>
             Pixel Count: {tile.widthPixel} x {tile.heightPixel}
           </Text>
+          <Text style={styles.tileDetail}>Tile Weight: {tile.weightLBS}</Text>
+          <Text style={styles.tileDetail}>Processor: {tile.processorType}</Text>
         </View>
       </View>
     </ScrollView>
@@ -43,36 +45,39 @@ export default function LEDTileComponent({ tile }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
+    padding: 16,
+    backgroundColor: "#f5f5f5", // Light background for the ScrollView
+  },
+  tile: {
+    backgroundColor: "#ffffff",
+    borderRadius: 10,
+    padding: 16,
+    marginBottom: 16,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 3,
   },
   image: {
     width: 200,
     height: 200,
-  },
-  tileTitle: {
-    fontSize: 32,
-    fontWeight: "bold",
-    margin: 12,
-  },
-  tile: {
-    margin: 12,
-    padding: 12,
-    justifyContent: "center",
-    alignItems: "center",
+    marginBottom: 16,
+    alignSelf: "center",
   },
   tileDetails: {
-    padding: 12,
-    marginTop: 12,
-    borderWidth: 2,
-    borderRadius: 4,
+    marginTop: 8,
+  },
+  tileTitle: {
+    fontSize: 24,
+    fontWeight: "600",
+    color: "#333",
+    marginBottom: 8,
+    textAlign: "center",
   },
   tileDetail: {
-    textAlign: "left",
-    fontSize: 20,
-    fontWeight: "semibold",
-    marginTop: 6,
-    padding: 6,
-    borderWidth: 1,
-    borderRadius: 4,
+    fontSize: 18,
+    color: "#666",
+    marginBottom: 8,
   },
 })

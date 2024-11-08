@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from "react-native"
 import { NavigationContainer } from "@react-navigation/native"
 import AppOneTabs from "./tabs/AppOneTabs"
 import AppTwoTabs from "./tabs/AppTwoTabs"
+import Welcome from "./components/Welcome"
 
 const Drawer = createDrawerNavigator()
 
@@ -20,7 +21,7 @@ export default function App() {
   if (isLoading) {
     return (
       <View style={styles.container}>
-        <Text>MooTV</Text>
+        <Welcome />
       </View>
     )
   } else {
