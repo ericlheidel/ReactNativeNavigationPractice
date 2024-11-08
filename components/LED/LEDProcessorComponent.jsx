@@ -1,13 +1,69 @@
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native"
+// import { useState } from "react"
+import {
+  // Dimensions,
+  Image,
+  // Modal,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native"
+// import { TouchableOpacity } from "react-native-gesture-handler"
 
 export default function LEDProcessorComponent({ processor }) {
+  // const PressableImage = () => {
+  //   const [modalVisible, setModalVisible] = useState(false)
+
+  //   const handleImagePress = () => {
+  //     setModalVisible(true)
+  //     console.log("modal is visible")
+  //   }
+
+  //   const handleModalClose = () => {
+  //     setModalVisible(false)
+  //     console.log("Modal is hidden")
+  //   }
+
+  //   return (
+  //     <>
+  //       {/* THUMBNAIL IMAGE */}
+  //       <TouchableOpacity onPress={handleImagePress}>
+  //         <Image
+  //           source={require("../../assets/favicon.png")}
+  //           style={styles.image}
+  //         />
+  //       </TouchableOpacity>
+
+  //       {/* FULL SIZE IMAGE MODAL */}
+  //       <Modal
+  //         visible={modalVisible}
+  //         transparent={true}
+  //         animationType="slide"
+  //         onRequestClose={handleModalClose}
+  //       >
+  //         <TouchableOpacity
+  //           style={styles.modalOverlay}
+  //           onPress={handleModalClose}
+  //         >
+  //           <Image
+  //             source={require("../../assets/favicon.png")}
+  //             style={styles.fullImage}
+  //             resizeMode="contain"
+  //           />
+  //         </TouchableOpacity>
+  //       </Modal>
+  //     </>
+  //   )
+  // }
+
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.tile}>
+      <View style={styles.processor}>
         <Image
           source={require("../../assets/favicon.png")}
           style={styles.image}
         />
+        {/* <PressableImage /> */}
         <View style={styles.processorDetails}>
           <Text style={styles.processorTitle}>
             {processor.processorBrand} {processor.processorModel}
@@ -53,7 +109,7 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: "#f5f5f5",
   },
-  tile: {
+  processor: {
     backgroundColor: "#ffffff",
     borderRadius: 10,
     padding: 16,
@@ -92,4 +148,15 @@ const styles = StyleSheet.create({
     color: "black",
     fontWeight: "600",
   },
+  // MODAL StyleSheet
+  // modalOverlay: {
+  //   flex: 1,
+  //   backgroundColor: "rgba(0,0,0,1)",
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  // },
+  // fullImage: {
+  //   width: Dimensions.get("window").width,
+  //   height: "80%",
+  // },
 })

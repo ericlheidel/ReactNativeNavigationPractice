@@ -3,7 +3,7 @@ import LEDTilesScreen from "../screens/LED/LEDTilesScreen"
 import LEDProcessorsScreen from "../screens/LED/LEDProcessorsScreen"
 import LEDCalculatorScreen from "../screens/LED/LEDCalculatorScreen"
 import { Ionicons } from "@expo/vector-icons"
-import { StyleSheet, View, Text, Platform } from "react-native"
+import { StyleSheet, View, Text } from "react-native"
 
 const Tab = createBottomTabNavigator()
 
