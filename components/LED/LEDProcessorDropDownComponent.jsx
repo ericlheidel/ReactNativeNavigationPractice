@@ -53,7 +53,6 @@ export default function LEDProcessorDropDownComponent({ setSelectKey }) {
                   onPress={() => {
                     handleSelect(item)
                     setSelectKey(item)
-                    console.log(item)
                   }}
                   style={styles.option}
                 >
