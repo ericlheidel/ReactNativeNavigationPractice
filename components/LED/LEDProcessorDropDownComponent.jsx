@@ -10,7 +10,7 @@ import {
 import { ProcessorExamples } from "../../utility"
 
 export default function LEDProcessorDropDownComponent({ setSelectKey }) {
-  const [selectedValue, setSelectedValue] = useState("Select a Brand")
+  const [selectedValue, setSelectedValue] = useState("All Brand")
   const [modalVisible, setModalVisible] = useState(false)
   const [options, setOptions] = useState([])
 

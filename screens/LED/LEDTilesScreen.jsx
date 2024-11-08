@@ -1,7 +1,7 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native"
 import { LEDTileExamples } from "../../utility"
 import LEDTileComponent from "../../components/LED/LEDTileComponent"
-import LEDTileDropDownComponent from "../../components/LED/LEDTileDropwDownComponent"
+import LEDTileDropDownComponent from "../../components/LED/LEDTileDropDownComponent"
 import { useEffect, useState } from "react"
 
 export default function LEDTilesScreen() {

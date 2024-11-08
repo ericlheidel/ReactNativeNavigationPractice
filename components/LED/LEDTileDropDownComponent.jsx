@@ -10,7 +10,7 @@ import {
 import { LEDTileExamples } from "../../utility"
 
 export default function LEDTileDropDownComponent({ setSelectKey }) {
-  const [selectedValue, setSelectedValue] = useState("Select a Brand")
+  const [selectedValue, setSelectedValue] = useState("All Brands")
   const [modalVisible, setModalVisible] = useState(false)
   const [options, setOptions] = useState([])
 

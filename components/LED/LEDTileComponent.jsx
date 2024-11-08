@@ -21,21 +21,36 @@ export default function LEDTileComponent({ tile }) {
             {tile.tileBrand} {tile.pixelPitch}mm
           </Text>
           {tile.tileModel ? (
-            <Text style={styles.tileDetail}>Model: {tile.tileModel}</Text>
+            <Text style={styles.tileDetail}>
+              Model: <Text style={styles.boldText}>{tile.tileModel}</Text>
+            </Text>
           ) : (
             ""
           )}
-          <Text style={styles.tileDetail}>Card Type: {tile.tileCard}</Text>
-          <Text style={styles.tileDetail}>Pitch: {tile.pixelPitch}mm</Text>
           <Text style={styles.tileDetail}>
-            Dimensions: {`\n`}
-            {tile.widthMM}mm x {tile.heightMM}mm
+            Card Type: <Text style={styles.boldText}>{tile.tileCard}</Text>
           </Text>
           <Text style={styles.tileDetail}>
-            Pixel Count: {tile.widthPixel} x {tile.heightPixel}
+            Pitch: <Text style={styles.boldText}>{tile.pixelPitch}mm</Text>
           </Text>
-          <Text style={styles.tileDetail}>Tile Weight: {tile.weightLBS}</Text>
-          <Text style={styles.tileDetail}>Processor: {tile.processorType}</Text>
+          <Text style={styles.tileDetail}>
+            Dimensions:{" "}
+            <Text style={styles.boldText}>
+              {tile.widthMM}mm x {tile.heightMM}mm
+            </Text>
+          </Text>
+          <Text style={styles.tileDetail}>
+            Pixel Count:{" "}
+            <Text style={styles.boldText}>
+              {tile.widthPixel} x {tile.heightPixel}
+            </Text>
+          </Text>
+          <Text style={styles.tileDetail}>
+            Tile Weight: <Text style={styles.boldText}>{tile.weightLBS}</Text>
+          </Text>
+          <Text style={styles.tileDetail}>
+            Processor: <Text style={styles.boldText}>{tile.processorType}</Text>
+          </Text>
         </View>
       </View>
     </ScrollView>
